@@ -1,12 +1,32 @@
 ﻿@implements ILayoutComponent
 
-<div class='container-fluid'>
-    <div class='row'>
-        <div class='col-sm-3'>
-            <NavMenu />
+<div class="uk-content">
+    <div  class="uk-navbar-container tm-navbar-container">
+        <div class="uk-container uk-container-expand">
+            <nav class="uk-navbar">
+                <div class="uk-navbar-left">
+                    <a href="../" class="uk-navbar-item uk-logo">
+                       My Personal Health Record Book
+                    </a>
+                </div> 
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        <li><a href="../login">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <div class='col-sm-9'>
-            @Body
+    </div>
+    <div class="tm-sidebar-left uk-visible@m">
+        <h3>General</h3>
+        <NavMenu />
+    </div>
+        
+    <div class='tm-main uk-section uk-section-default'>
+        <div class="uk-container uk-container-small uk-position-relative">
+            <div>
+                @Body
+            </div>
         </div>
     </div>
 </div>
